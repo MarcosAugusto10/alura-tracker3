@@ -4,12 +4,12 @@
       <BarraLateral @aoTemaAlterado="trocarTema"/>
     </div>
     <div class="column is-three-quarter conteudo">
-      <Formulario @aoSalvarTarefa="salvarTarefa"/>
+      <FormularioComponent @aoSalvarTarefa="salvarTarefa"/>
       <div class="lista">
-        <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
-        <Box v-if="listaEstaVazia">
+        <TarefaComponent v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
+        <BoxComponent v-if="listaEstaVazia">
           Você não está muito produtivo hoje :(
-        </Box>
+        </BoxComponent>
       </div>
     </div>
   </main>
@@ -18,18 +18,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue'
-import Formulario from './components/Formulario.vue'
-import Tarefa from './components/Tarefa.vue'
-import Box from './components/Box.vue'
+import FormularioComponent from './components/FormularioComponent.vue'
+import TarefaComponent from './components/TarefaComponent.vue'
+import BoxComponent from './components/BoxComponent.vue'
 import ITarefa from './interfaces/ITarefa'
 
 export default defineComponent({
   name: 'App',
   components: {
     BarraLateral,
-    Formulario,
-    Tarefa,
-    Box
+    FormularioComponent,
+    TarefaComponent,
+    BoxComponent
   },
   data () {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div class="is-flex is-align-items-center is-justify-content-space-between">
-    <Cronometro :tempoEmSegundos="tempoEmSegundos" />
+    <CronometroComponent :tempoEmSegundos="tempoEmSegundos" />
     <button class="button" @click="iniciar" :disabled="cronometroRodando">
       <span class="icon">
         <i class="fas fa-play"></i>
@@ -18,13 +18,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Cronometro from './Cronometro.vue'
+import CronometroComponent from './CronometroComponent.vue'
 
 export default defineComponent({
-  name: "Temporizador",
+  name: "TemporizadorComponent",
   emits: ['aoTemporizadorFinalizado'],
   components: {
-    Cronometro
+    CronometroComponent
   },
   data () {
     return {
