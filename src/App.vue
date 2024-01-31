@@ -13,6 +13,7 @@
       </div>
     </div>
   </main>
+  <FooterComponent/>
 </template>
 
 <script lang="ts">
@@ -22,6 +23,7 @@ import FormularioComponent from './components/FormularioComponent.vue'
 import TarefaComponent from './components/TarefaComponent.vue'
 import BoxComponent from './components/BoxComponent.vue'
 import ITarefa from './interfaces/ITarefa'
+import FooterComponent from './components/FooterComponent.vue';
 
 export default defineComponent({
   name: 'App',
@@ -29,7 +31,8 @@ export default defineComponent({
     BarraLateral,
     FormularioComponent,
     TarefaComponent,
-    BoxComponent
+    BoxComponent,
+    FooterComponent
   },
   data () {
     return {
